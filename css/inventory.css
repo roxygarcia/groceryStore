@@ -1,0 +1,18 @@
+header {
+    height: 6vh;
+    background-color: var(--main_color);
+}
+#inventory {
+    margin: auto;
+}
+#inventory .card {
+    max-height: 60vh;
+    background-color: #fff;
+    overflow: scroll;
+    padding: 0.4em;
+}
+
+ .box {
+    background-color: var(--accent_color);
+    border: 1px solid #333;
+}

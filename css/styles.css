@@ -1,51 +1,78 @@
-@import url('https://fonts.googleapis.com/css?family=Pacifico|Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Montserrat|Roboto&display=swap');
 
 :root {
     --main_font: 'Roboto',
         sans-serif;
     --heading_font: 'Pacifico',
         cursive;
-
+    --special_font: 'Montserrat',
+    sans-serif;
+    --main_color: #f1d60c;
+    --accent_color: #eee;
+    --big_text_shadow: 6px 6px 0px #333;
 }
 
 body {
-    background-color: #70DA40;
     font-family: var(--main_font);
     top: 0;
     margin: 0;
     padding: 0;
-}
-header {
-    height: 90vh;
-    width: 100%;
-    background-image: url('../img/hero_1.jpeg');
-    background-size: cover;
-    display: grid;
-    justify-content: center;
-    align-items: center;
+    background-color: var(--accent_color);
 }
 
+ main#content, footer{
+     width: 100%;
+     margin: auto;
+ }
 main#content {
     height: 100vh;
+    padding: 1em;
+}
+main section {
+    text-align: justify;
+    font-size: 1em;
     width: 80%;
     margin: auto;
-    background-color: #fff;
 }
-h1 {
-    color: #55C225;
-    font-size: 7em;
-    margin-top: -2em;
-    font-family: var(--heading_font);
+main p {
+    font-family: var(--special_font);
 }
-ul,
-li {
-    list-style: none;
+footer {
+    background-color: var(--main_color);
 }
 
-#iconsCredit {
-    font-size: 0.5em;
-    font-style: italic;
-    text-align: center;
+
+#hero h1 {
+    font-family: var(--heading_font);
+    color: var(--main_color);
+    font-size: 8em;
+    text-shadow: var(--big_text_shadow);
+    margin-top: -2em;
+}
+
+.card a {
+    color: inherit;
+    border: 0.1em solid var(--main_color);
+    border-radius: 0.3em;
+    color: #333;
+    padding: 0.3em 2em;
+    margin: 0 1em;
+    display: grid;
+}
+
+.card a:hover {
+    transform: scale(1.2);
+    transition: all 0.25s 80ms;
+    opacity: 0.5;
+    border: 0.05em solid #333;
+}
+ul,
+li, 
+a, a:hover
+ {
+    list-style: none;
+    text-decoration: none;
+    
 }
 
 .center_center {
@@ -54,3 +81,111 @@ li {
     align-items: center;
     text-align: center;
 }
+
+.main_button {
+    font-family: 'Montserrat',
+        sans-serif;
+    border: 0.25em solid var(--main_color);
+    border-radius: 0.5em;
+    font-size: 1.2em;
+    padding: 0.5em;
+    text-transform: capitalize;
+    background-color: var(--accent_color);
+    transition: transform 0.5s 80ms;
+}
+
+.main_button:hover {
+    transform: scale(1.10);
+}
+
+.nav_link {
+    border: 1px solid var(--main_color);
+    border-radius: 0.5em;
+    text-transform: uppercase;
+    color: var(--accent_color);
+}
+
+#iconsCredit {
+    font-size: 0.5em;
+    font-style: italic;
+}
+
+#hero {
+    height: 95vh;
+    width: 100%;
+    background-image: url('../img/hero_2.jpeg');
+    background-size: cover;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+header .main_button {
+    margin-top: 5em;
+}
+
+nav ul {
+    position: absolute;
+    top: 1em;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0.2em 0.2em;
+    padding: 0.5em;
+    color: #fff;
+}
+
+nav ul li,
+.nav_link,
+.main_button,
+p,
+.card h2,
+a, a:hover {
+    font-weight: 100;
+    font-family: var(--special_font);
+}
+
+i {
+    color: var(--main_color);
+    text-shadow: 4px 2px 3px #aaa;
+    margin-bottom: 0.5em;
+}
+#cards {
+    height: auto;
+    padding: 1em;
+    margin-top: 3em;
+}
+.card {
+    border: 0.3em solid var(--main_color);
+    border-radius: 5px;
+    padding: 1em;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.card h2 {
+    font-family: var(--special_font);
+    text-transform: uppercase;
+    text-shadow: 2px 4px 3px #aaa;
+    margin-bottom: 0.5em;
+}
+
+
+/* .card {
+    animation: bouncing 0.5s 0s infinite alternate both; /*cubic-bezier(0.1, 0.25, 0.1, 1)
+}
+*/
+
+@keyframes bouncing {
+    0% {
+        bottom: 0;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+
+    100% {
+        bottom: 50px;
+        box-shadow: 0 50px 50px rgba(0, 0, 0, 0.1);
+    }
+} 
